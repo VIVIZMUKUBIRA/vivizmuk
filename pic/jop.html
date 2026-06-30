@@ -1,0 +1,1132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viviz Mubira Junior School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a6bc4, #0c3d76);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: #ffcc00;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(12, 61, 118, 0.7), rgba(12, 61, 118, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #0c3d76;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #ffd84d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0c3d76;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ffcc00;
+            border-radius: 2px;
+        }
+
+        /* Administration Section */
+        .administration {
+            background-color: white;
+        }
+
+        .admin-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .admin-card {
+            background-color: #f5f9ff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .admin-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .admin-image {
+            height: 250px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            overflow: hidden;
+        }
+
+        .admin-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .admin-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .admin-info h3 {
+            color: #0c3d76;
+            margin-bottom: 10px;
+        }
+
+        /* Classrooms Section */
+        .classrooms {
+            background-color: #f0f7ff;
+        }
+
+        .classroom-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .classroom-item {
+            height: 200px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .classroom-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .classroom-item span {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .classroom-item:hover {
+            transform: scale(1.03);
+        }
+
+        /* Computer Lab Section */
+        .computer-lab {
+            background-color: white;
+        }
+
+        .lab-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lab-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            overflow: hidden;
+        }
+
+        .lab-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lab-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .lab-info h3 {
+            color: #0c3d76;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .lab-info p {
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background-color: #f0f7ff;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #0c3d76;
+        }
+
+        /* Teachers Section */
+        .teachers {
+            background-color: #f0f7ff;
+        }
+
+        .teachers-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .teacher-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .teacher-image {
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            overflow: hidden;
+        }
+
+        .teacher-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .teacher-info h3 {
+            color: #0c3d76;
+            margin-bottom: 5px;
+        }
+
+        /* Aerial View Section */
+        .aerial-view {
+            background-color: white;
+        }
+
+        .aerial-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aerial-image {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .aerial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .aerial-info {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* About Us Section */
+        .about-us {
+            background-color: #f0f7ff;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-info h3 {
+            color: #0c3d76;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .about-info p {
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0c3d76;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h3 {
+            color: #0c3d76;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #0c3d76;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #0c3d76;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0c3d76;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #0c3d76;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1a6bc4;
+        }
+
+        .map-placeholder {
+            height: 200px; 
+            background-color: #f0f7ff; 
+            border-radius: 10px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #888;
+            overflow: hidden;
+        }
+
+        .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Enroll Section */
+        .enroll {
+            background: linear-gradient(135deg, #1a6bc4, #0c3d76);
+            color: white;
+            text-align: center;
+        }
+
+        .enroll h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .enroll p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a2a52;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #ffcc00;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #ffcc00;
+            color: #0c3d76;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">Viviz Mubira Junior School</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#administration">Administration</a></li>
+                        <li><a href="#classrooms">Classrooms</a></li>
+                        <li><a href="#computer-lab">Computer Lab</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                        <li><a href="#aerial-view">Aerial View</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Viviz Mubira Junior School</h1>
+            <p>Nurturing young minds for a brighter future</p>
+            <a href="#enroll" class="cta-button">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Administration Section -->
+    <section id="administration" class="administration">
+        <div class="container">
+            <div class="section-title">
+                <h2>School Administration</h2>
+                <p>Meet our dedicated leadership team</p>
+            </div>
+            <div class="admin-container">
+                <div class="admin-card">
+                    <div class="admin-image">
+                        <img src="director.jpg" alt="School Director">
+                    </div>
+                    <div class="admin-info">
+                        <h3>Mr. John Mubiru</h3>
+                        <p>School Director</p>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-image">
+                        <img src="headteacher.jpg" alt="Headteacher">
+                    </div>
+                    <div class="admin-info">
+                        <h3>Mrs. Sarah Nalwoga</h3>
+                        <p>Headteacher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classrooms Section -->
+    <section id="classrooms" class="classrooms">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Classrooms</h2>
+                <p>Modern learning environments for our students</p>
+            </div>
+            <div class="classroom-gallery">
+                <div class="classroom-item">
+                    <img src="classroom1.jpg" alt="Primary 1 Classroom">
+                    <span>Primary 1 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom2.jpg" alt="Primary 2 Classroom">
+                    <span>Primary 2 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom3.jpg" alt="Primary 3 Classroom">
+                    <span>Primary 3 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom4.jpg" alt="Primary 4 Classroom">
+                    <span>Primary 4 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom5.jpg" alt="Primary 5 Classroom">
+                    <span>Primary 5 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom6.jpg" alt="Primary 6 Classroom">
+                    <span>Primary 6 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="classroom7.jpg" alt="Primary 7 Classroom">
+                    <span>Primary 7 Classroom</span>
+                </div>
+                <div class="classroom-item">
+                    <img src="kindergarten.jpg" alt="Kindergarten Classroom">
+                    <span>Kindergarten Classroom</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Computer Lab Section -->
+    <section id="computer-lab" class="computer-lab">
+        <div class="container">
+            <div class="section-title">
+                <h2>Computer Laboratory</h2>
+                <p>Preparing students for the digital age</p>
+            </div>
+            <div class="lab-content">
+                <div class="lab-image">
+                    <img src="computer-lab.jpg" alt="Computer Lab">
+                </div>
+                <div class="lab-info">
+                    <h3>Modern Technology for Education</h3>
+                    <p>Our computer lab is equipped with the latest technology to ensure our students develop essential digital skills from an early age.</p>
+                    <p>We offer:</p>
+                    <div class="features">
+                        <div class="feature">30 Modern Computers</div>
+                        <div class="feature">High-Speed Internet</div>
+                        <div class="feature">Educational Software</div>
+                        <div class="feature">Interactive Learning</div>
+                        <div class="feature">Certified IT Instructor</div>
+                        <div class="feature">Coding Classes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="teachers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Teachers</h2>
+                <p>Meet our dedicated teaching staff</p>
+            </div>
+            <div class="teachers-container">
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="teacher1.jpg" alt="Mr. David Kato">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mr. David Kato</h3>
+                        <p>Mathematics Teacher</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="teacher2.jpg" alt="Ms. Grace Namuli">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Ms. Grace Namuli</h3>
+                        <p>English Teacher</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="teacher3.jpg" alt="Mrs. Rebecca Nanteza">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mrs. Rebecca Nanteza</h3>
+                        <p>Science Teacher</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="teacher4.jpg" alt="Mr. Robert Ssemakula">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mr. Robert Ssemakula</h3>
+                        <p>Social Studies Teacher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aerial View Section -->
+    <section id="aerial-view" class="aerial-view">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aerial View</h2>
+                <p>See our school from above</p>
+            </div>
+            <div class="aerial-container">
+                <div class="aerial-image">
+                    <img src="aerial-view.jpg" alt="Aerial View of Viviz Mubira Junior School">
+                </div>
+                <div class="aerial-info">
+                    <p>Our campus spans over 5 acres with modern facilities, playgrounds, and green spaces that provide an ideal environment for learning and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Our story and mission</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="school-building.jpg" alt="School Building">
+                </div>
+                <div class="about-info">
+                    <h3>Viviz Mubira Junior School</h3>
+                    <p>Established in 2005, Viviz Mubira Junior School has been at the forefront of providing quality education to children in our community. We believe in nurturing each child's unique talents and abilities.</p>
+                    <p>Our mission is to provide a safe, stimulating learning environment that promotes academic excellence, character development, and lifelong learning skills.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">650+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">35</span>
+                            <span class="stat-label">Qualified Teachers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Classrooms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p>123 Education Road, Kampala, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p>+256 712 345 678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p>info@vivizmubirajunior.ac.ug</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p>Monday - Friday: 7:30 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <img src="map-location.jpg" alt="School Location Map">
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enroll Section -->
+    <section id="enroll" class="enroll">
+        <div class="container">
+            <h2>Enroll Your Child Today</h2>
+            <p>Give your child the gift of quality education. Join the Viviz Mubira Junior School family and watch them thrive in a nurturing environment.</p>
+            <a href="#contact" class="cta-button">Contact Us to Enroll</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Viviz Mubira Junior School</h3>
+                    <p>Providing quality education since 2005. We are committed to nurturing young minds and preparing them for a successful future.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#administration">Administration</a></li>
+                        <li><a href="#classrooms">Classrooms</a></li>
+                        <li><a href="#computer-lab">Computer Lab</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Important Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#aerial-view">Aerial View</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#enroll">Enroll Now</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Road, Kampala</li>
+                        <li><i class="fas fa-phone"></i> +256 712 345 678</li>
+                        <li><i class="fas fa-envelope"></i> info@vivizmubirajunior.ac.ug</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 7:30AM - 5:00PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Viviz Mubira Junior School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to highlight active navigation link
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
